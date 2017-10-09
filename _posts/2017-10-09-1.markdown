@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Ubuntu GNOME 16.04LTSの初期設定
+outline: Ubuntuインストール時に毎回検索してしまう、パッケージを入れる以外の個人的な基本設定を記しています。
 categories: [Linux]
 ---
 
