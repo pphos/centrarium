@@ -103,10 +103,16 @@ pre code.hljs {
 	box-shadow: 0 2px $highlight-color;
 	padding: 0 1em;
 	margin: 0;
+
 	/*
 	*	Navigation Menu - http://refills.bourbon.io/unstyled/ (see "Navigation")
 	*/
   // Mobile view
+	@media screen and (min-width: $tablet) {
+		.mobile-nav, .drawer-hamburger{
+			display: none;
+		}
+	}
   .navigation-menu-button {
     display: block;
     float: right;

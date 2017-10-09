@@ -53,9 +53,15 @@
 </footer>
 
 <!-- Scripts -->
-<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+
+<!-- drawer.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+<!-- drawer.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function() {
@@ -63,6 +69,7 @@ $(document).ready(function() {
   hljs.initHighlightingOnLoad();
 
   // Header
+/*
   var menuToggle = $('#js-mobile-menu').unbind();
   $('#js-navigation-menu').removeClass("show");
   menuToggle.on('click', function(e) {
@@ -73,6 +80,9 @@ $(document).ready(function() {
       }
     });
   });
+*/
+  $('.drawer').drawer();
+
 });
 
 </script>
