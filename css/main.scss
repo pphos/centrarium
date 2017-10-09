@@ -5,6 +5,12 @@
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 // Includes Bourbon, Neat, and Bitters (thanks, thoughtbot!)
+$header-bg-color-secondary: #00c3ff;
+$header-bg-color: #ffff1c;
+
+$footer-bg-color: #36D1DC;
+$footer-bg-color-secondary: #5B86E5;
+
 @import
   "bourbon/bourbon",
   "base/base",
