@@ -1,0 +1,37 @@
+---
+layout: post
+title: Ubuntu GNOME 16.04LTSの初期設定
+categories: [Linux]
+---
+
+## 行う設定
+---
+- home ディレクトリの英語化
+- Mozcでのキー配置をUSからJPに変更する
+- 全角と半角の切り替えをUS風にする
+
+### homeディレクトリの英語化
+ディレクトリ移動するために、全角文字を打ちたくないので以下のコマンドを実行してディレクトリ名を変更します。
+```
+ $ LANG=C xdg-user-dirs-gtk-update
+```  
+<br>
+### Mozcでのキー配置をUSからJPに変更する
+GNOMEで日本語入力にMozcを選択した場合、デフォルトでUSになっている場合がある.  そこで、キーの設定ファイルを弄ってJPに戻す.
+```
+ $ sudo vi /usr/share/ibus/component/mozc.xml
+```
+OSインストールの直後では、layoutタグ内が以下のように"default"になっている.<br>
+```xml
+ <layout>default</layout>
+```
+この"default"をjpに変更することでMozcでのキー配置を日本語に戻すことができる.
+```xml
+ <layout>jp</layout>
+```
+<br>
+### 全角と半角の切り替えをUS風にする
+入力切換は頻繁に行うのに、全角/半角ボタンの位置が遠いと押すのにイライラします.そこで、無変換と変換を潰して、全角と半角を割り当てることで、それだけUS風にします.
+1. Mozcのプロパティを開き、"キー設定の選択"の編集を押す
+2. 直接入力の Henkan のコマンドを <strong>IMEを有効化</strong>にする
+3. 入力文字なしの Muhenkan のコマンドを <strong>IMEを無効化</strong>にする
